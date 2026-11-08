@@ -1,0 +1,86 @@
+{
+  "schema": 1,
+  "status": "Fixed retrospective comparison. Source tables had been inspected; original later windows were not model-evaluated when parameters were frozen. Subsequent diagnostics reanalyse inspected, dependent windows.",
+  "models": [
+    "revision_loss",
+    "utility_fit"
+  ],
+  "reference_control": "carry_forward, beta=0, in the same predictor class",
+  "predictor": "Unchanged single beta times age basis: count/(age+1) for ILI; 1/(age+1) for GDP log level. Same features/capacity for both objectives.",
+  "beta_grid": {
+    "minimum": -0.5,
+    "maximum": 0.5,
+    "step": 0.005,
+    "candidates": 201
+  },
+  "training": {
+    "selection": "First 24 eligible families for scales; first 24 families whose issue strictly follows the last scale-family target for inner radius; first 12 families whose issue strictly follows the last inner-radius target for inner utility. Total 60 families with maturity gaps, all preceding final calibration.",
+    "gdp_pool_start": "2000-01",
+    "scale": "Template median absolute carry-forward query revision over the first 24 families, floored by the median of all strictly positive absolute query revisions in those same families. Separate units per domain; if all revisions zero, defer with unsupported-scale status. No calibration or test labels select scales.",
+    "revision_loss": "Minimise summed squared coordinate revision error over the same 60 training families and fixed beta grid. For output, centre log inputs, targets and the age basis within each vintage, preserving zero-sum contrasts under a common level shift.",
+    "utility_fit": "For each beta, compute the alpha=.05 max-score conformal quantile proxy from the 24 inner-radius families using fixed scales. Apply those bands to the 12 later inner-utility families. Maximize mean(correct reused answers minus 19*wrong reused answers), deferral=0. Only training labels enter. The illustrative 19:1 loss is a predeclared research utility, not an estimated operational cost or conditional-risk guarantee.",
+    "tie_break": "Smallest absolute beta, then smaller signed beta; no secondary error tuning"
+  },
+  "final_calibration": {
+    "alpha": 0.05,
+    "score": "Maximum normalised absolute query error, fixed training scales and the same nominal 39-family window for each predictor; eligibility leaves 30 ILI and 39 output calibration families.",
+    "ili_input_cutoffs": [
+      "2013-03-08",
+      "2013-11-29"
+    ],
+    "gdp_issue_months": [
+      "2006-02",
+      "2009-04"
+    ],
+    "maturity": "Every target cutoff strictly precedes first test input cutoff; report ineligible/missing units and do not replace them. Rank uses actual eligible calibration count, infinity if insufficient.",
+    "fixed": "No refitting or recalibration during either validation window"
+  },
+  "validation": {
+    "ili_input_release_days": [
+      "2014-01-10",
+      "2014-06-27"
+    ],
+    "ili_horizon_days": 28,
+    "gdp_issue_months": [
+      "2009-08",
+      "2010-01"
+    ],
+    "gdp_horizon_monthly_vintages": 3,
+    "workloads": "Unchanged 12 ILI mean-trend and 8 GDP same-vintage log-growth zero-threshold queries; input anchors/support frozen for target",
+    "metrics": "Reuse/defer counts and fractions, illustrative utility/query, wrong reuses, average absolute query and raw-coordinate errors, calibrated quantile and radii, nominal family misses descriptively only; report each domain separately",
+    "execution": "Independent versus shared prefix/log execution must agree numerically and on decisions before interpretation; no timing or end-to-end savings claim",
+    "interpretation": "Fixed chronological windows are dependent and narrow. No conditional-on-acceptance/time-uniform guarantee or empirical nominal-coverage promise. No repeated tuning if utility fails."
+  },
+  "compute": "CPU-only, single process; fixed 201-candidate scalar comparison, no campaign or new predictor class",
+  "ili_nominal_slots": {
+    "calibration": [
+      "2013-03-02",
+      "2013-11-23"
+    ],
+    "test": [
+      "2014-01-04",
+      "2014-06-21"
+    ]
+  },
+  "continuous_audit": {
+    "domain": [
+      -0.5,
+      0.5
+    ],
+    "selection": "All maxima of inner-training raw R-20W, with scales fixed from training and each fit using its own rank cutoff.",
+    "scale_policies": [
+      "median positive first-phase revisions",
+      "nearest-rank lower quartile of the same positive first-phase revisions"
+    ],
+    "cost_controls": [
+      9,
+      19,
+      39
+    ],
+    "windows": "Original; first subsequent two eligible ILI releases and twelve output vintages; first twelve output vintages after prior targets whose supports follow all prior references. Selection uses source identities, not outcomes.",
+    "one_sided": "Point-fit control only; no re-optimised one-sided theorem.",
+    "least_loss": "Separate retrospective witnesses under the primary policy; not a training-only selection rule.",
+    "set_band": "Enclosing predictions over the same training optimum set, recalibrated by its own joint-family distance score; separate exchangeability premise.",
+    "comparison": "Exact envelope and direct-rank complete partitions; this is computational agreement, not independent statistical confirmation."
+  }
+}

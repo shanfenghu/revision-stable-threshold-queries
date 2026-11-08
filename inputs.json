@@ -1,0 +1,307 @@
+{
+  "schema": 1,
+  "files": [
+    {
+      "sha256": "cbcf24ae283fe1f1da3efcba6cc0eafad527a9443d978e76a38adefd8fabd03e",
+      "bytes": 19502666,
+      "url": "https://media.githubusercontent.com/media/cmu-delphi/data-revisions-forecasting-paper/main/data/raw/ilicases_weekly_preprocessed.csv",
+      "path": "ili-revisions.csv",
+      "role": "ili_table"
+    },
+    {
+      "sha256": "ae854a7518bf3a0504e4c477344bd7ed98c4321326ed2b1952b69ffaa1a7adce",
+      "bytes": 700496,
+      "url": "https://www.philadelphiafed.org/-/media/FRBP/Assets/Surveys-And-Data/real-time-data/data-files/xlsx/routputMvQd.xlsx?hash=B3AD0AED9E268AA077E8D9B8AAF2AC83&sc_lang=en",
+      "path": "real-output.xlsx",
+      "role": "gdp_table"
+    },
+    {
+      "sha256": "75f781ba73e942465b74f2b7c7118101fff9093f97f7f56f3048c889b310cdcb",
+      "bytes": 24904,
+      "url": "https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201101-201236&lag=0",
+      "lag": 0,
+      "records": 88,
+      "path": "ili-training/lag00.json",
+      "role": "ili_training"
+    },
+    {
+      "sha256": "a6fee3e60324ed9524df87e4d0754a35be703ed4ba5e5641d64d3c9365b523e5",
+      "bytes": 24638,
+      "url": "https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201101-201236&lag=1",
+      "lag": 1,
+      "records": 87,
+      "path": "ili-training/lag01.json",
+      "role": "ili_training"
+    },
+    {
+      "sha256": "4c8e5886202bd0f44f2fe8426d29ffaa7dc050b08d91ee3a46856e8514b0435d",
+      "bytes": 24312,
+      "url": "https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201101-201236&lag=2",
+      "lag": 2,
+      "records": 86,
+      "path": "ili-training/lag02.json",
+      "role": "ili_training"
+    },
+    {
+      "sha256": "c400166d132019af6445ae4715a3178dad425d74b2ceebdf509bc552151e3d57",
+      "bytes": 23996,
+      "url": "https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201101-201236&lag=3",
+      "lag": 3,
+      "records": 85,
+      "path": "ili-training/lag03.json",
+      "role": "ili_training"
+    },
+    {
+      "sha256": "35b1c373a194a99ff7ac42c28a5fb9c5b3d51f3705839a47e993a30bc6be9b00",
+      "bytes": 23399,
+      "url": "https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201101-201236&lag=4",
+      "lag": 4,
+      "records": 83,
+      "path": "ili-training/lag04.json",
+      "role": "ili_training"
+    },
+    {
+      "sha256": "bff4fe35279de7552369cc1a72e4e01bbd470ccacc66fdd4332506f36c38061d",
+      "bytes": 22815,
+      "url": "https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201101-201236&lag=5",
+      "lag": 5,
+      "records": 81,
+      "path": "ili-training/lag05.json",
+      "role": "ili_training"
+    },
+    {
+      "sha256": "4035cdd43475d3c32e929743cbf7fd4e8f45adad399bbc0c407b948ff65b625c",
+      "bytes": 22242,
+      "url": "https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201101-201236&lag=6",
+      "lag": 6,
+      "records": 79,
+      "path": "ili-training/lag06.json",
+      "role": "ili_training"
+    },
+    {
+      "sha256": "802cf0a6cb5f14d0b2b1f4476b67bb0e78c5467ff4a41f7f9bca1a39534d59d8",
+      "bytes": 21631,
+      "url": "https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201101-201236&lag=7",
+      "lag": 7,
+      "records": 77,
+      "path": "ili-training/lag07.json",
+      "role": "ili_training"
+    },
+    {
+      "sha256": "20141379b9e7508bb6fe1515c7d6a97e1f7c8e2526df08050aa07b2a334e4aca",
+      "bytes": 21060,
+      "url": "https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201101-201236&lag=8",
+      "lag": 8,
+      "records": 75,
+      "path": "ili-training/lag08.json",
+      "role": "ili_training"
+    },
+    {
+      "sha256": "90c2e87f752a2e1a5947319dacbef300756a87fb6c5c0552edaae897132fb200",
+      "bytes": 20426,
+      "url": "https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201101-201236&lag=9",
+      "lag": 9,
+      "records": 73,
+      "path": "ili-training/lag09.json",
+      "role": "ili_training"
+    },
+    {
+      "sha256": "883b5a3fbb10e9fa4fc040d1bbe0c9680d4cf6ef697f293310f554875e070f16",
+      "bytes": 19933,
+      "url": "https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201101-201236&lag=10",
+      "lag": 10,
+      "records": 71,
+      "path": "ili-training/lag10.json",
+      "role": "ili_training"
+    },
+    {
+      "sha256": "e32765f0fb415c01efd98aa288da6b8c612e8930a20ff88cf8b7527f5296f5c9",
+      "bytes": 19369,
+      "url": "https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201101-201236&lag=11",
+      "lag": 11,
+      "records": 69,
+      "path": "ili-training/lag11.json",
+      "role": "ili_training"
+    },
+    {
+      "sha256": "9fb06820870e2e8d01456259ea3dc9b8b96baac893fc7f7278da0026034057ab",
+      "bytes": 18778,
+      "url": "https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201101-201236&lag=12",
+      "lag": 12,
+      "records": 67,
+      "path": "ili-training/lag12.json",
+      "role": "ili_training"
+    },
+    {
+      "sha256": "91835deb40931696d99f2e46346da38040163e02385e2160e04dc26905c2e95c",
+      "bytes": 18169,
+      "url": "https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201101-201236&lag=13",
+      "lag": 13,
+      "records": 65,
+      "path": "ili-training/lag13.json",
+      "role": "ili_training"
+    },
+    {
+      "sha256": "1b6676433666992457fd1661a01730045b8c820b10ff78e1bd5158d0ce156530",
+      "bytes": 17581,
+      "url": "https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201101-201236&lag=14",
+      "lag": 14,
+      "records": 63,
+      "path": "ili-training/lag14.json",
+      "role": "ili_training"
+    },
+    {
+      "sha256": "5fa2d923677f69c3228af28bd45e41a22958665c34c0914ee8fbd9eb1d34fe27",
+      "bytes": 17007,
+      "url": "https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201101-201236&lag=15",
+      "lag": 15,
+      "records": 61,
+      "path": "ili-training/lag15.json",
+      "role": "ili_training"
+    },
+    {
+      "sha256": "98bea5bf73d619c292b9539a1294495cef30629d57087dca51d08fb4bfd48cd8",
+      "bytes": 23812,
+      "url": "https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201251-201430&lag=0",
+      "lag": 0,
+      "records": 83,
+      "path": "ili-evaluation/lag00.json",
+      "role": "ili_evaluation"
+    },
+    {
+      "sha256": "444170981d93d58be365ba8eeee5d60756f2e64966893ba20dfef5bd476d5e9f",
+      "bytes": 23242,
+      "url": "https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201251-201429&lag=1",
+      "lag": 1,
+      "records": 81,
+      "path": "ili-evaluation/lag01.json",
+      "role": "ili_evaluation"
+    },
+    {
+      "sha256": "4632232780e1f3e2b7abef941d4ec0d11acad308f8012a8a223a126ec87e272a",
+      "bytes": 22700,
+      "url": "https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201251-201428&lag=2",
+      "lag": 2,
+      "records": 79,
+      "path": "ili-evaluation/lag02.json",
+      "role": "ili_evaluation"
+    },
+    {
+      "sha256": "2060e399fb66eb6735b024beb936c8acf6287658ff633ba04650e5bac00eafd2",
+      "bytes": 22097,
+      "url": "https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201251-201427&lag=3",
+      "lag": 3,
+      "records": 77,
+      "path": "ili-evaluation/lag03.json",
+      "role": "ili_evaluation"
+    },
+    {
+      "sha256": "1d676795b32d9a7d5d58967be58e13c703ab0807ca2830d70525f1e518b35f8f",
+      "bytes": 21529,
+      "url": "https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201251-201426&lag=4",
+      "lag": 4,
+      "records": 75,
+      "path": "ili-evaluation/lag04.json",
+      "role": "ili_evaluation"
+    },
+    {
+      "sha256": "1f5065c391fd64efc388892c03688a2d84bf26c98c5a6814df08b1f8a2a97cf0",
+      "bytes": 20935,
+      "url": "https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201251-201425&lag=5",
+      "lag": 5,
+      "records": 73,
+      "path": "ili-evaluation/lag05.json",
+      "role": "ili_evaluation"
+    },
+    {
+      "sha256": "b5bfd477b25ff9afc5b1b50b5ba16f61eb9b168f94386ce6cd811313c08e5d6f",
+      "bytes": 20348,
+      "url": "https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201251-201424&lag=6",
+      "lag": 6,
+      "records": 71,
+      "path": "ili-evaluation/lag06.json",
+      "role": "ili_evaluation"
+    },
+    {
+      "sha256": "0242c563b33f0c2339a1787d08545c5d0ebef4c2e6551181076b159a8513b109",
+      "bytes": 19763,
+      "url": "https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201251-201423&lag=7",
+      "lag": 7,
+      "records": 69,
+      "path": "ili-evaluation/lag07.json",
+      "role": "ili_evaluation"
+    },
+    {
+      "sha256": "c21e6d003baac4167143f9a9b701d401e33d766b46c35984c0f2ef8619c90c7c",
+      "bytes": 19167,
+      "url": "https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201251-201422&lag=8",
+      "lag": 8,
+      "records": 67,
+      "path": "ili-evaluation/lag08.json",
+      "role": "ili_evaluation"
+    },
+    {
+      "sha256": "380a5d270f1877b2aaa794203b0ad6bce5dc7379ff489afb4f87bc875ecdb676",
+      "bytes": 18585,
+      "url": "https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201251-201421&lag=9",
+      "lag": 9,
+      "records": 65,
+      "path": "ili-evaluation/lag09.json",
+      "role": "ili_evaluation"
+    },
+    {
+      "sha256": "7436529a92738caa5409705b89eaa5886cbf675ce60eeacf1b8f0e0dae3b280b",
+      "bytes": 18064,
+      "url": "https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201251-201420&lag=10",
+      "lag": 10,
+      "records": 63,
+      "path": "ili-evaluation/lag10.json",
+      "role": "ili_evaluation"
+    },
+    {
+      "sha256": "5ecdf908f362a1d459a2ef58db597bbba8afaaea8288388f2b1bda1a6559e77e",
+      "bytes": 17477,
+      "url": "https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201251-201419&lag=11",
+      "lag": 11,
+      "records": 61,
+      "path": "ili-evaluation/lag11.json",
+      "role": "ili_evaluation"
+    },
+    {
+      "sha256": "16fd3b42e3d522a81f54a93bc31e9e048e4a7c9f4b7d9d4676c0bc432d57f707",
+      "bytes": 16886,
+      "url": "https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201251-201418&lag=12",
+      "lag": 12,
+      "records": 59,
+      "path": "ili-evaluation/lag12.json",
+      "role": "ili_evaluation"
+    },
+    {
+      "sha256": "d4e9eaaeef76d04bbd651a79a8488df8ad75e4321d3ab293e08bdcdf05f76e13",
+      "bytes": 16590,
+      "url": "https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201251-201417&lag=13",
+      "lag": 13,
+      "records": 58,
+      "path": "ili-evaluation/lag13.json",
+      "role": "ili_evaluation"
+    },
+    {
+      "sha256": "4848f2ab9477149b12a1bdd2cea81b6cb0df0a166db379d9af61c5b06a89f888",
+      "bytes": 16294,
+      "url": "https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201251-201416&lag=14",
+      "lag": 14,
+      "records": 57,
+      "path": "ili-evaluation/lag14.json",
+      "role": "ili_evaluation"
+    },
+    {
+      "sha256": "059a96ec5412f9b2cafb6782107caca016d9839d1e389ba3c00b4aefe79f8109",
+      "bytes": 16001,
+      "url": "https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201251-201415&lag=15",
+      "lag": 15,
+      "records": 56,
+      "path": "ili-evaluation/lag15.json",
+      "role": "ili_evaluation"
+    }
+  ]
+}

@@ -1,0 +1,1304 @@
+{
+  "ili": {
+    "primary": {
+      "floor": 208.0,
+      "scales": [
+        923.0,
+        761.5,
+        486.625,
+        282.5,
+        235.75,
+        218.625,
+        208.0,
+        208.0,
+        208.0,
+        208.0,
+        208.0,
+        208.0
+      ],
+      "inner_maximum": 98,
+      "training_optimal_regions": [
+        {
+          "left": "1358061012/7928643665",
+          "right": "1173079320/4496737411",
+          "left_approx": 0.17128541392205449,
+          "right_approx": 0.26087343173083494,
+          "left_closed": true,
+          "right_closed": false
+        }
+      ],
+      "inner_wrong_range": [
+        0,
+        0
+      ],
+      "cost_optimum_sets": {
+        "9": [
+          {
+            "left": "1358061012/7928643665",
+            "right": "1173079320/4496737411",
+            "left_approx": 0.17128541392205449,
+            "right_approx": 0.26087343173083494,
+            "left_closed": true,
+            "right_closed": false
+          }
+        ],
+        "19": [
+          {
+            "left": "1358061012/7928643665",
+            "right": "1173079320/4496737411",
+            "left_approx": 0.17128541392205449,
+            "right_approx": 0.26087343173083494,
+            "left_closed": true,
+            "right_closed": false
+          }
+        ],
+        "39": [
+          {
+            "left": "1358061012/7928643665",
+            "right": "1173079320/4496737411",
+            "left_approx": 0.17128541392205449,
+            "right_approx": 0.26087343173083494,
+            "left_closed": true,
+            "right_closed": false
+          }
+        ]
+      },
+      "windows": {
+        "original": {
+          "answers": 288,
+          "issues": [
+            "2014-01-10",
+            "2014-01-17",
+            "2014-01-24",
+            "2014-01-31",
+            "2014-02-07",
+            "2014-02-14",
+            "2014-02-21",
+            "2014-02-28",
+            "2014-03-07",
+            "2014-03-14",
+            "2014-03-21",
+            "2014-03-28",
+            "2014-04-04",
+            "2014-04-11",
+            "2014-04-18",
+            "2014-04-25",
+            "2014-05-02",
+            "2014-05-09",
+            "2014-05-16",
+            "2014-05-24",
+            "2014-05-31",
+            "2014-06-07",
+            "2014-06-14",
+            "2014-06-21"
+          ],
+          "outcomes": {
+            "utility_total": [
+              226,
+              229
+            ],
+            "reused": [
+              226,
+              229
+            ],
+            "wrong_reuses": [
+              0,
+              0
+            ],
+            "always_reused": 224,
+            "possibly_reused": 232,
+            "selection_sensitive_answers": 8,
+            "always_mask": "0xdfcfbcdf4fb4ff4ffc9fe97e921f20fe4ffcffcffeffeffeffefffdffffafe7ff4ffedfe",
+            "possible_mask": "0xffeffcdf4fb4ff4ffc9fe97e927fa0fe4ffcffcffeffeffeffeffffffffafe7ffcffedfe"
+          },
+          "references": {
+            "revision_loss": {
+              "reused": 227,
+              "wrong_reuses": 0,
+              "utility_total": 227,
+              "q": 2.310687500000007,
+              "rank": 30,
+              "reuse_mask": "0xdfcffcdf4fb4ff4ffc9fe97e925f20fe4ffcffcffeffeffeffeffffffffafe7ff4ffedfe"
+            },
+            "utility_fit": {
+              "reused": 227,
+              "wrong_reuses": 0,
+              "utility_total": 227,
+              "q": 2.4756530448717933,
+              "rank": 30,
+              "reuse_mask": "0xdfcfbcdf4fb4ff4ffc9fe97e927f20fe4ffcffcffeffeffeffefffdffffafe7ffcffedfe"
+            },
+            "carry_forward": {
+              "reused": 220,
+              "wrong_reuses": 0,
+              "utility_total": 220,
+              "q": 3.5327433628318583,
+              "rank": 30,
+              "reuse_mask": "0xdf4dbcdf4fb4ff4ffc9fe93e934f24fe4ff4ffcffeffeffeffefff9dff3bfe7ffcffddfe"
+            },
+            "continuous_revision": {
+              "reused": 227,
+              "wrong_reuses": 0,
+              "utility_total": 227,
+              "q": 2.3054693533589705,
+              "rank": 30,
+              "reuse_mask": "0xdfcffcdf4fb4ff4ffc9fe97e925f20fe4ffcffcffeffeffeffeffffffffafe7ff4ffedfe"
+            }
+          },
+          "set_band": {
+            "reused": 228,
+            "wrong_reuses": 0,
+            "utility_total": 228,
+            "reuse_mask": "0xffeffcdf4fb4ff4ffc9fe97e921f20fe4ffcffcffeffeffeffeffffffffafe7ff4ffedfe",
+            "wrong_mask": "0x0"
+          },
+          "training_loss": {
+            "minimum_training_loss": 0,
+            "normalized_minimum_loss": "0",
+            "target_later_utility": 227
+          },
+          "one_sided": {
+            "revision_loss": {
+              "beta": 0.21,
+              "symmetric": {
+                "reused": 227,
+                "wrong_reuses": 0,
+                "utility_total": 227,
+                "q": 2.310687500000007,
+                "rank": 30,
+                "reuse_mask": "0xdfcffcdf4fb4ff4ffc9fe97e925f20fe4ffcffcffeffeffeffeffffffffafe7ff4ffedfe"
+              },
+              "oriented_one_sided_control": {
+                "reused": 227,
+                "wrong_reuses": 0,
+                "utility_total": 227,
+                "q": 2.310687500000007,
+                "rank": 30,
+                "reuse_mask": "0xdfcffcdf4fb4ff4ffc9fe97e925f20fe4ffcffcffeffeffeffeffffffffafe7ff4ffedfe"
+              }
+            },
+            "utility_fit": {
+              "beta": 0.175,
+              "symmetric": {
+                "reused": 227,
+                "wrong_reuses": 0,
+                "utility_total": 227,
+                "q": 2.4756530448717933,
+                "rank": 30,
+                "reuse_mask": "0xdfcfbcdf4fb4ff4ffc9fe97e927f20fe4ffcffcffeffeffeffefffdffffafe7ffcffedfe"
+              },
+              "oriented_one_sided_control": {
+                "reused": 227,
+                "wrong_reuses": 0,
+                "utility_total": 227,
+                "q": 2.4756530448717933,
+                "rank": 30,
+                "reuse_mask": "0xdfcfbcdf4fb4ff4ffc9fe97e927f20fe4ffcffcffeffeffeffefffdffffafe7ffcffedfe"
+              }
+            },
+            "carry_forward": {
+              "beta": 0.0,
+              "symmetric": {
+                "reused": 220,
+                "wrong_reuses": 0,
+                "utility_total": 220,
+                "q": 3.5327433628318583,
+                "rank": 30,
+                "reuse_mask": "0xdf4dbcdf4fb4ff4ffc9fe93e934f24fe4ff4ffcffeffeffeffefff9dff3bfe7ffcffddfe"
+              },
+              "oriented_one_sided_control": {
+                "reused": 220,
+                "wrong_reuses": 0,
+                "utility_total": 220,
+                "q": 3.5327433628318583,
+                "rank": 30,
+                "reuse_mask": "0xdf4dbcdf4fb4ff4ffc9fe93e934f24fe4ff4ffcffeffeffeffefff9dff3bfe7ffcffddfe"
+              }
+            }
+          }
+        },
+        "subsequent": {
+          "answers": 24,
+          "issues": [
+            "2014-06-28",
+            "2014-07-04"
+          ],
+          "outcomes": {
+            "utility_total": [
+              16,
+              16
+            ],
+            "reused": [
+              16,
+              16
+            ],
+            "wrong_reuses": [
+              0,
+              0
+            ],
+            "always_reused": 16,
+            "possibly_reused": 16,
+            "selection_sensitive_answers": 0,
+            "always_mask": "0xdf4fb4",
+            "possible_mask": "0xdf4fb4"
+          },
+          "references": {
+            "revision_loss": {
+              "reused": 16,
+              "wrong_reuses": 0,
+              "utility_total": 16,
+              "q": 2.310687500000007,
+              "rank": 30,
+              "reuse_mask": "0xdf4fb4"
+            },
+            "utility_fit": {
+              "reused": 16,
+              "wrong_reuses": 0,
+              "utility_total": 16,
+              "q": 2.4756530448717933,
+              "rank": 30,
+              "reuse_mask": "0xdf4fb4"
+            },
+            "carry_forward": {
+              "reused": 15,
+              "wrong_reuses": 0,
+              "utility_total": 15,
+              "q": 3.5327433628318583,
+              "rank": 30,
+              "reuse_mask": "0xdb4fb4"
+            },
+            "continuous_revision": {
+              "reused": 16,
+              "wrong_reuses": 0,
+              "utility_total": 16,
+              "q": 2.3054693533589705,
+              "rank": 30,
+              "reuse_mask": "0xdf4fb4"
+            }
+          },
+          "set_band": {
+            "reused": 16,
+            "wrong_reuses": 0,
+            "utility_total": 16,
+            "reuse_mask": "0xdf4fb4",
+            "wrong_mask": "0x0"
+          },
+          "training_loss": {
+            "minimum_training_loss": 0,
+            "normalized_minimum_loss": "0",
+            "target_later_utility": 16
+          },
+          "one_sided": {
+            "revision_loss": {
+              "beta": 0.21,
+              "symmetric": {
+                "reused": 16,
+                "wrong_reuses": 0,
+                "utility_total": 16,
+                "q": 2.310687500000007,
+                "rank": 30,
+                "reuse_mask": "0xdf4fb4"
+              },
+              "oriented_one_sided_control": {
+                "reused": 16,
+                "wrong_reuses": 0,
+                "utility_total": 16,
+                "q": 2.310687500000007,
+                "rank": 30,
+                "reuse_mask": "0xdf4fb4"
+              }
+            },
+            "utility_fit": {
+              "beta": 0.175,
+              "symmetric": {
+                "reused": 16,
+                "wrong_reuses": 0,
+                "utility_total": 16,
+                "q": 2.4756530448717933,
+                "rank": 30,
+                "reuse_mask": "0xdf4fb4"
+              },
+              "oriented_one_sided_control": {
+                "reused": 16,
+                "wrong_reuses": 0,
+                "utility_total": 16,
+                "q": 2.4756530448717933,
+                "rank": 30,
+                "reuse_mask": "0xdf4fb4"
+              }
+            },
+            "carry_forward": {
+              "beta": 0.0,
+              "symmetric": {
+                "reused": 15,
+                "wrong_reuses": 0,
+                "utility_total": 15,
+                "q": 3.5327433628318583,
+                "rank": 30,
+                "reuse_mask": "0xdb4fb4"
+              },
+              "oriented_one_sided_control": {
+                "reused": 15,
+                "wrong_reuses": 0,
+                "utility_total": 15,
+                "q": 3.5327433628318583,
+                "rank": 30,
+                "reuse_mask": "0xdb4fb4"
+              }
+            }
+          }
+        }
+      }
+    },
+    "lower_quartile_floor": {
+      "floor": 68.0,
+      "scales": [
+        923.0,
+        761.5,
+        486.625,
+        282.5,
+        235.75,
+        218.625,
+        75.5,
+        94.75,
+        97.125,
+        68.0,
+        68.0,
+        68.0
+      ],
+      "inner_maximum": 81,
+      "training_optimal_regions": [
+        {
+          "left": "47052915/347867683",
+          "right": "216516/1304243",
+          "left_approx": 0.13526095495338095,
+          "right_approx": 0.16600894158527207,
+          "left_closed": false,
+          "right_closed": false
+        }
+      ],
+      "inner_wrong_range": [
+        0,
+        0
+      ],
+      "cost_optimum_sets": {
+        "19": [
+          {
+            "left": "47052915/347867683",
+            "right": "216516/1304243",
+            "left_approx": 0.13526095495338095,
+            "right_approx": 0.16600894158527207,
+            "left_closed": false,
+            "right_closed": false
+          }
+        ]
+      },
+      "windows": {
+        "original": {
+          "answers": 288,
+          "issues": [
+            "2014-01-10",
+            "2014-01-17",
+            "2014-01-24",
+            "2014-01-31",
+            "2014-02-07",
+            "2014-02-14",
+            "2014-02-21",
+            "2014-02-28",
+            "2014-03-07",
+            "2014-03-14",
+            "2014-03-21",
+            "2014-03-28",
+            "2014-04-04",
+            "2014-04-11",
+            "2014-04-18",
+            "2014-04-25",
+            "2014-05-02",
+            "2014-05-09",
+            "2014-05-16",
+            "2014-05-24",
+            "2014-05-31",
+            "2014-06-07",
+            "2014-06-14",
+            "2014-06-21"
+          ],
+          "outcomes": {
+            "utility_total": [
+              194,
+              196
+            ],
+            "reused": [
+              194,
+              196
+            ],
+            "wrong_reuses": [
+              0,
+              0
+            ],
+            "always_reused": 191,
+            "possibly_reused": 198,
+            "selection_sensitive_answers": 7,
+            "always_mask": "0xff0fe0de4fa4ff4ff4bf4958900f20fe0fe4ff4ff4ff4ff4ffeffeddaf38fe4ff4ff4dfe",
+            "possible_mask": "0xff0fe0de4fa4ff4ff4bf4978900f20fe0fe4ff4ff4ff4ff4ffeffeffef7afe4ff4ffcdfe"
+          },
+          "references": {
+            "revision_loss": {
+              "reused": 196,
+              "wrong_reuses": 0,
+              "utility_total": 196,
+              "q": 5.776191176470627,
+              "rank": 30,
+              "reuse_mask": "0xff0fe0de4fa4ff4ff4bf4958900f20fe0fe4ff4ff4ff4ff4ffeffeffaff8fe4ff4ffcdfe"
+            },
+            "utility_fit": {
+              "reused": 196,
+              "wrong_reuses": 0,
+              "utility_total": 196,
+              "q": 6.004669117647074,
+              "rank": 30,
+              "reuse_mask": "0xff0fe0de4fa4ff4ff4bf4958900f20fe0fe4ff4ff4ff4ff4ffeffeffaff8fe4ff4ffcdfe"
+            },
+            "carry_forward": {
+              "reused": 191,
+              "wrong_reuses": 0,
+              "utility_total": 191,
+              "q": 7.245382585751979,
+              "rank": 30,
+              "reuse_mask": "0xff0fe0de0fa4ff4ff4ff49f8900f20fe0fe4ff4ff4ff4ff4ffeffe9def3afe0ff4ff4df4"
+            },
+            "continuous_revision": {
+              "reused": 196,
+              "wrong_reuses": 0,
+              "utility_total": 196,
+              "q": 5.7689640224474825,
+              "rank": 30,
+              "reuse_mask": "0xff0fe0de4fa4ff4ff4bf4958900f20fe0fe4ff4ff4ff4ff4ffeffeffaff8fe4ff4ffcdfe"
+            }
+          },
+          "set_band": {
+            "reused": 193,
+            "wrong_reuses": 0,
+            "utility_total": 193,
+            "reuse_mask": "0xff0fe0de4fa4ff4ff4bf4958900f20fe0fe4ff4ff4ff4ff4ffeffefdaf38fe4ff4ffcdfe",
+            "wrong_mask": "0x0"
+          }
+        },
+        "subsequent": {
+          "answers": 24,
+          "issues": [
+            "2014-06-28",
+            "2014-07-04"
+          ],
+          "outcomes": {
+            "utility_total": [
+              13,
+              13
+            ],
+            "reused": [
+              13,
+              13
+            ],
+            "wrong_reuses": [
+              0,
+              0
+            ],
+            "always_reused": 13,
+            "possibly_reused": 13,
+            "selection_sensitive_answers": 0,
+            "always_mask": "0xfe0fa0",
+            "possible_mask": "0xfe0fa0"
+          },
+          "references": {
+            "revision_loss": {
+              "reused": 13,
+              "wrong_reuses": 0,
+              "utility_total": 13,
+              "q": 5.776191176470627,
+              "rank": 30,
+              "reuse_mask": "0xfe0fa0"
+            },
+            "utility_fit": {
+              "reused": 13,
+              "wrong_reuses": 0,
+              "utility_total": 13,
+              "q": 6.004669117647074,
+              "rank": 30,
+              "reuse_mask": "0xfe0fa0"
+            },
+            "carry_forward": {
+              "reused": 12,
+              "wrong_reuses": 0,
+              "utility_total": 12,
+              "q": 7.245382585751979,
+              "rank": 30,
+              "reuse_mask": "0xde0fa0"
+            },
+            "continuous_revision": {
+              "reused": 13,
+              "wrong_reuses": 0,
+              "utility_total": 13,
+              "q": 5.7689640224474825,
+              "rank": 30,
+              "reuse_mask": "0xfe0fa0"
+            }
+          },
+          "set_band": {
+            "reused": 13,
+            "wrong_reuses": 0,
+            "utility_total": 13,
+            "reuse_mask": "0xfe0fa0",
+            "wrong_mask": "0x0"
+          }
+        }
+      }
+    }
+  },
+  "gdp": {
+    "primary": {
+      "floor": 0.0007944005914168883,
+      "scales": [
+        0.0007944005914168883,
+        0.0007944005914168883,
+        0.0007944005914168883,
+        0.0007944005914168883,
+        0.0007944005914168883,
+        0.0007944005914168883,
+        0.0007944005914168883,
+        0.0007944005914168883
+      ],
+      "inner_maximum": 63,
+      "training_optimal_regions": [
+        {
+          "left": "1119690962175/70368744177664",
+          "right": "2562353056135/140737488355328",
+          "left_approx": 0.015911765589393667,
+          "right_approx": 0.018206613504894165,
+          "left_closed": true,
+          "right_closed": true
+        }
+      ],
+      "inner_wrong_range": [
+        0,
+        0
+      ],
+      "cost_optimum_sets": {
+        "9": [
+          {
+            "left": "1119690962175/70368744177664",
+            "right": "2562353056135/140737488355328",
+            "left_approx": 0.015911765589393667,
+            "right_approx": 0.018206613504894165,
+            "left_closed": true,
+            "right_closed": true
+          }
+        ],
+        "19": [
+          {
+            "left": "1119690962175/70368744177664",
+            "right": "2562353056135/140737488355328",
+            "left_approx": 0.015911765589393667,
+            "right_approx": 0.018206613504894165,
+            "left_closed": true,
+            "right_closed": true
+          }
+        ],
+        "39": [
+          {
+            "left": "1119690962175/70368744177664",
+            "right": "2562353056135/140737488355328",
+            "left_approx": 0.015911765589393667,
+            "right_approx": 0.018206613504894165,
+            "left_closed": true,
+            "right_closed": true
+          }
+        ]
+      },
+      "windows": {
+        "original": {
+          "answers": 48,
+          "issues": [
+            "2009-08",
+            "2009-09",
+            "2009-10",
+            "2009-11",
+            "2009-12",
+            "2010-01"
+          ],
+          "outcomes": {
+            "utility_total": [
+              12,
+              12
+            ],
+            "reused": [
+              12,
+              12
+            ],
+            "wrong_reuses": [
+              0,
+              0
+            ],
+            "always_reused": 12,
+            "possibly_reused": 12,
+            "selection_sensitive_answers": 0,
+            "always_mask": "0x2828280a0a0a",
+            "possible_mask": "0x2828280a0a0a"
+          },
+          "references": {
+            "revision_loss": {
+              "reused": 38,
+              "wrong_reuses": 0,
+              "utility_total": 38,
+              "q": 7.17421022685918,
+              "rank": 38,
+              "reuse_mask": "0xfafbfb7e7e7e"
+            },
+            "utility_fit": {
+              "reused": 12,
+              "wrong_reuses": 0,
+              "utility_total": 12,
+              "q": 21.399382442830245,
+              "rank": 38,
+              "reuse_mask": "0x2828280a0a0a"
+            },
+            "carry_forward": {
+              "reused": 38,
+              "wrong_reuses": 0,
+              "utility_total": 38,
+              "q": 7.17421022685918,
+              "rank": 38,
+              "reuse_mask": "0xfafbfb7e7e7e"
+            },
+            "continuous_revision": {
+              "reused": 38,
+              "wrong_reuses": 0,
+              "utility_total": 38,
+              "q": 7.070799666559311,
+              "rank": 38,
+              "reuse_mask": "0xfafbfb7e7e7e"
+            }
+          },
+          "set_band": {
+            "reused": 12,
+            "wrong_reuses": 0,
+            "utility_total": 12,
+            "reuse_mask": "0x2828280a0a0a",
+            "wrong_mask": "0x0"
+          },
+          "training_loss": {
+            "minimum_training_loss": 11,
+            "normalized_minimum_loss": "11/96",
+            "target_later_utility": 38
+          },
+          "one_sided": {
+            "revision_loss": {
+              "beta": 0.0,
+              "symmetric": {
+                "reused": 38,
+                "wrong_reuses": 0,
+                "utility_total": 38,
+                "q": 7.17421022685918,
+                "rank": 38,
+                "reuse_mask": "0xfafbfb7e7e7e"
+              },
+              "oriented_one_sided_control": {
+                "reused": 38,
+                "wrong_reuses": 0,
+                "utility_total": 38,
+                "q": 7.17421022685918,
+                "rank": 38,
+                "reuse_mask": "0xfafbfb7e7e7e"
+              }
+            },
+            "utility_fit": {
+              "beta": 0.015,
+              "symmetric": {
+                "reused": 12,
+                "wrong_reuses": 0,
+                "utility_total": 12,
+                "q": 21.399382442830245,
+                "rank": 38,
+                "reuse_mask": "0x2828280a0a0a"
+              },
+              "oriented_one_sided_control": {
+                "reused": 19,
+                "wrong_reuses": 0,
+                "utility_total": 19,
+                "q": 19.621485601757012,
+                "rank": 38,
+                "reuse_mask": "0xa8a8a92a2a2a"
+              }
+            },
+            "carry_forward": {
+              "beta": 0.0,
+              "symmetric": {
+                "reused": 38,
+                "wrong_reuses": 0,
+                "utility_total": 38,
+                "q": 7.17421022685918,
+                "rank": 38,
+                "reuse_mask": "0xfafbfb7e7e7e"
+              },
+              "oriented_one_sided_control": {
+                "reused": 38,
+                "wrong_reuses": 0,
+                "utility_total": 38,
+                "q": 7.17421022685918,
+                "rank": 38,
+                "reuse_mask": "0xfafbfb7e7e7e"
+              }
+            }
+          }
+        },
+        "subsequent": {
+          "answers": 96,
+          "issues": [
+            "2010-02",
+            "2010-03",
+            "2010-04",
+            "2010-05",
+            "2010-06",
+            "2010-07",
+            "2010-08",
+            "2010-09",
+            "2010-10",
+            "2010-11",
+            "2010-12",
+            "2011-01"
+          ],
+          "outcomes": {
+            "utility_total": [
+              39,
+              39
+            ],
+            "reused": [
+              39,
+              39
+            ],
+            "wrong_reuses": [
+              0,
+              0
+            ],
+            "always_reused": 39,
+            "possibly_reused": 39,
+            "selection_sensitive_answers": 0,
+            "always_mask": "0x2a2a2a8a8a8aa2a2a2a9a9a9",
+            "possible_mask": "0x2a2a2a8a8a8aa2a2a2a9a9a9"
+          },
+          "references": {
+            "revision_loss": {
+              "reused": 63,
+              "wrong_reuses": 0,
+              "utility_total": 63,
+              "q": 7.17421022685918,
+              "rank": 38,
+              "reuse_mask": "0x7b7b7a9e9e9fa7a7a7e9e9e9"
+            },
+            "utility_fit": {
+              "reused": 39,
+              "wrong_reuses": 0,
+              "utility_total": 39,
+              "q": 21.399382442830245,
+              "rank": 38,
+              "reuse_mask": "0x2a2a2a8a8a8aa2a2a2a9a9a9"
+            },
+            "carry_forward": {
+              "reused": 63,
+              "wrong_reuses": 0,
+              "utility_total": 63,
+              "q": 7.17421022685918,
+              "rank": 38,
+              "reuse_mask": "0x7b7b7a9e9e9fa7a7a7e9e9e9"
+            },
+            "continuous_revision": {
+              "reused": 63,
+              "wrong_reuses": 0,
+              "utility_total": 63,
+              "q": 7.070799666559311,
+              "rank": 38,
+              "reuse_mask": "0x7b7b7a9e9e9fa7a7a7e9e9e9"
+            }
+          },
+          "set_band": {
+            "reused": 39,
+            "wrong_reuses": 0,
+            "utility_total": 39,
+            "reuse_mask": "0x2a2a2a8a8a8aa2a2a2a9a9a9",
+            "wrong_mask": "0x0"
+          },
+          "training_loss": {
+            "minimum_training_loss": 11,
+            "normalized_minimum_loss": "11/96",
+            "target_later_utility": 63
+          },
+          "one_sided": {
+            "revision_loss": {
+              "beta": 0.0,
+              "symmetric": {
+                "reused": 63,
+                "wrong_reuses": 0,
+                "utility_total": 63,
+                "q": 7.17421022685918,
+                "rank": 38,
+                "reuse_mask": "0x7b7b7a9e9e9fa7a7a7e9e9e9"
+              },
+              "oriented_one_sided_control": {
+                "reused": 63,
+                "wrong_reuses": 0,
+                "utility_total": 63,
+                "q": 7.17421022685918,
+                "rank": 38,
+                "reuse_mask": "0x7b7b7a9e9e9fa7a7a7e9e9e9"
+              }
+            },
+            "utility_fit": {
+              "beta": 0.015,
+              "symmetric": {
+                "reused": 39,
+                "wrong_reuses": 0,
+                "utility_total": 39,
+                "q": 21.399382442830245,
+                "rank": 38,
+                "reuse_mask": "0x2a2a2a8a8a8aa2a2a2a9a9a9"
+              },
+              "oriented_one_sided_control": {
+                "reused": 45,
+                "wrong_reuses": 0,
+                "utility_total": 45,
+                "q": 19.621485601757012,
+                "rank": 38,
+                "reuse_mask": "0x2a2a2a8a8a8aa6a6a6e9e9e9"
+              }
+            },
+            "carry_forward": {
+              "beta": 0.0,
+              "symmetric": {
+                "reused": 63,
+                "wrong_reuses": 0,
+                "utility_total": 63,
+                "q": 7.17421022685918,
+                "rank": 38,
+                "reuse_mask": "0x7b7b7a9e9e9fa7a7a7e9e9e9"
+              },
+              "oriented_one_sided_control": {
+                "reused": 63,
+                "wrong_reuses": 0,
+                "utility_total": 63,
+                "q": 7.17421022685918,
+                "rank": 38,
+                "reuse_mask": "0x7b7b7a9e9e9fa7a7a7e9e9e9"
+              }
+            }
+          }
+        },
+        "disjoint": {
+          "answers": 96,
+          "issues": [
+            "2012-11",
+            "2012-12",
+            "2013-01",
+            "2013-02",
+            "2013-03",
+            "2013-04",
+            "2013-05",
+            "2013-06",
+            "2013-07",
+            "2013-08",
+            "2013-09",
+            "2013-10"
+          ],
+          "outcomes": {
+            "utility_total": [
+              45,
+              48
+            ],
+            "reused": [
+              45,
+              48
+            ],
+            "wrong_reuses": [
+              0,
+              0
+            ],
+            "always_reused": 45,
+            "possibly_reused": 48,
+            "selection_sensitive_answers": 3,
+            "always_mask": "0xa2a2a2aaaaaaaaaaaaaaaaaa",
+            "possible_mask": "0xaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "references": {
+            "revision_loss": {
+              "reused": 66,
+              "wrong_reuses": 0,
+              "utility_total": 66,
+              "q": 7.17421022685918,
+              "rank": 38,
+              "reuse_mask": "0xebebeababbbbaeaeaeebebea"
+            },
+            "utility_fit": {
+              "reused": 48,
+              "wrong_reuses": 0,
+              "utility_total": 48,
+              "q": 21.399382442830245,
+              "rank": 38,
+              "reuse_mask": "0xaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            "carry_forward": {
+              "reused": 66,
+              "wrong_reuses": 0,
+              "utility_total": 66,
+              "q": 7.17421022685918,
+              "rank": 38,
+              "reuse_mask": "0xebebeababbbbaeaeaeebebea"
+            },
+            "continuous_revision": {
+              "reused": 66,
+              "wrong_reuses": 0,
+              "utility_total": 66,
+              "q": 7.070799666559311,
+              "rank": 38,
+              "reuse_mask": "0xebebeababbbbaeaeaeebebea"
+            }
+          },
+          "set_band": {
+            "reused": 48,
+            "wrong_reuses": 0,
+            "utility_total": 48,
+            "reuse_mask": "0xaaaaaaaaaaaaaaaaaaaaaaaa",
+            "wrong_mask": "0x0"
+          },
+          "training_loss": {
+            "minimum_training_loss": 11,
+            "normalized_minimum_loss": "11/96",
+            "target_later_utility": 66
+          },
+          "one_sided": {
+            "revision_loss": {
+              "beta": 0.0,
+              "symmetric": {
+                "reused": 66,
+                "wrong_reuses": 0,
+                "utility_total": 66,
+                "q": 7.17421022685918,
+                "rank": 38,
+                "reuse_mask": "0xebebeababbbbaeaeaeebebea"
+              },
+              "oriented_one_sided_control": {
+                "reused": 66,
+                "wrong_reuses": 0,
+                "utility_total": 66,
+                "q": 7.17421022685918,
+                "rank": 38,
+                "reuse_mask": "0xebebeababbbbaeaeaeebebea"
+              }
+            },
+            "utility_fit": {
+              "beta": 0.015,
+              "symmetric": {
+                "reused": 48,
+                "wrong_reuses": 0,
+                "utility_total": 48,
+                "q": 21.399382442830245,
+                "rank": 38,
+                "reuse_mask": "0xaaaaaaaaaaaaaaaaaaaaaaaa"
+              },
+              "oriented_one_sided_control": {
+                "reused": 48,
+                "wrong_reuses": 0,
+                "utility_total": 48,
+                "q": 19.621485601757012,
+                "rank": 38,
+                "reuse_mask": "0xaaaaaaaaaaaaaaaaaaaaaaaa"
+              }
+            },
+            "carry_forward": {
+              "beta": 0.0,
+              "symmetric": {
+                "reused": 66,
+                "wrong_reuses": 0,
+                "utility_total": 66,
+                "q": 7.17421022685918,
+                "rank": 38,
+                "reuse_mask": "0xebebeababbbbaeaeaeebebea"
+              },
+              "oriented_one_sided_control": {
+                "reused": 66,
+                "wrong_reuses": 0,
+                "utility_total": 66,
+                "q": 7.17421022685918,
+                "rank": 38,
+                "reuse_mask": "0xebebeababbbbaeaeaeebebea"
+              }
+            }
+          }
+        }
+      }
+    },
+    "lower_quartile_floor": {
+      "floor": 0.00015920626517385017,
+      "scales": [
+        0.0007407838859334603,
+        0.0007249937978928145,
+        0.00015920626517385017,
+        0.00015920626517385017,
+        0.00015920626517385017,
+        0.00015920626517385017,
+        0.00015920626517385017,
+        0.00015920626517385017
+      ],
+      "inner_maximum": 40,
+      "training_optimal_regions": [
+        {
+          "left": "-17725831380555/404620279021568",
+          "right": "114921157515135/2392537302040576",
+          "left_approx": -0.04380855903569316,
+          "right_approx": 0.04803317273971848,
+          "left_closed": true,
+          "right_closed": true
+        }
+      ],
+      "inner_wrong_range": [
+        0,
+        0
+      ],
+      "cost_optimum_sets": {
+        "19": [
+          {
+            "left": "-17725831380555/404620279021568",
+            "right": "114921157515135/2392537302040576",
+            "left_approx": -0.04380855903569316,
+            "right_approx": 0.04803317273971848,
+            "left_closed": true,
+            "right_closed": true
+          }
+        ]
+      },
+      "windows": {
+        "original": {
+          "answers": 48,
+          "issues": [
+            "2009-08",
+            "2009-09",
+            "2009-10",
+            "2009-11",
+            "2009-12",
+            "2010-01"
+          ],
+          "outcomes": {
+            "utility_total": [
+              6,
+              39
+            ],
+            "reused": [
+              6,
+              39
+            ],
+            "wrong_reuses": [
+              0,
+              0
+            ],
+            "always_reused": 6,
+            "possibly_reused": 39,
+            "selection_sensitive_answers": 33,
+            "always_mask": "0x282828000000",
+            "possible_mask": "0xfefefe7e7e7e"
+          },
+          "references": {
+            "revision_loss": {
+              "reused": 34,
+              "wrong_reuses": 0,
+              "utility_total": 34,
+              "q": 35.79756638937926,
+              "rank": 38,
+              "reuse_mask": "0xfaf8f87e7e7e"
+            },
+            "utility_fit": {
+              "reused": 27,
+              "wrong_reuses": 0,
+              "utility_total": 27,
+              "q": 63.913546045410754,
+              "rank": 38,
+              "reuse_mask": "0xf8f8f83c3c3c"
+            },
+            "carry_forward": {
+              "reused": 34,
+              "wrong_reuses": 0,
+              "utility_total": 34,
+              "q": 35.79756638937926,
+              "rank": 38,
+              "reuse_mask": "0xfaf8f87e7e7e"
+            },
+            "continuous_revision": {
+              "reused": 35,
+              "wrong_reuses": 0,
+              "utility_total": 35,
+              "q": 35.28157281229697,
+              "rank": 38,
+              "reuse_mask": "0xfafaf87e7e7e"
+            }
+          },
+          "set_band": {
+            "reused": 33,
+            "wrong_reuses": 0,
+            "utility_total": 33,
+            "reuse_mask": "0xf8f8f87e7e7e",
+            "wrong_mask": "0x0"
+          }
+        },
+        "subsequent": {
+          "answers": 96,
+          "issues": [
+            "2010-02",
+            "2010-03",
+            "2010-04",
+            "2010-05",
+            "2010-06",
+            "2010-07",
+            "2010-08",
+            "2010-09",
+            "2010-10",
+            "2010-11",
+            "2010-12",
+            "2011-01"
+          ],
+          "outcomes": {
+            "utility_total": [
+              24,
+              57
+            ],
+            "reused": [
+              24,
+              57
+            ],
+            "wrong_reuses": [
+              0,
+              0
+            ],
+            "always_reused": 18,
+            "possibly_reused": 57,
+            "selection_sensitive_answers": 39,
+            "always_mask": "0x282828808080808080a0a0a0",
+            "possible_mask": "0x7a7a7a9e9e9eb4b4b4ececec"
+          },
+          "references": {
+            "revision_loss": {
+              "reused": 51,
+              "wrong_reuses": 0,
+              "utility_total": 51,
+              "q": 35.79756638937926,
+              "rank": 38,
+              "reuse_mask": "0x7a7a7a9e9e9ea4a4a4e8e8e8"
+            },
+            "utility_fit": {
+              "reused": 45,
+              "wrong_reuses": 0,
+              "utility_total": 45,
+              "q": 63.913546045410754,
+              "rank": 38,
+              "reuse_mask": "0x7878789c9c9ca4a4a4e8e8e8"
+            },
+            "carry_forward": {
+              "reused": 51,
+              "wrong_reuses": 0,
+              "utility_total": 51,
+              "q": 35.79756638937926,
+              "rank": 38,
+              "reuse_mask": "0x7a7a7a9e9e9ea4a4a4e8e8e8"
+            },
+            "continuous_revision": {
+              "reused": 51,
+              "wrong_reuses": 0,
+              "utility_total": 51,
+              "q": 35.28157281229697,
+              "rank": 38,
+              "reuse_mask": "0x7a7a7a9e9e9ea4a4a4e8e8e8"
+            }
+          },
+          "set_band": {
+            "reused": 51,
+            "wrong_reuses": 0,
+            "utility_total": 51,
+            "reuse_mask": "0x787878dcdcdcb4b4b4e8e8e8",
+            "wrong_mask": "0x0"
+          }
+        },
+        "disjoint": {
+          "answers": 96,
+          "issues": [
+            "2012-11",
+            "2012-12",
+            "2013-01",
+            "2013-02",
+            "2013-03",
+            "2013-04",
+            "2013-05",
+            "2013-06",
+            "2013-07",
+            "2013-08",
+            "2013-09",
+            "2013-10"
+          ],
+          "outcomes": {
+            "utility_total": [
+              15,
+              55
+            ],
+            "reused": [
+              15,
+              55
+            ],
+            "wrong_reuses": [
+              0,
+              0
+            ],
+            "always_reused": 15,
+            "possibly_reused": 55,
+            "selection_sensitive_answers": 40,
+            "always_mask": "0x808080a0a0a0808080202020",
+            "possible_mask": "0xe8e8e8b8b8b8ecececfaf8f8"
+          },
+          "references": {
+            "revision_loss": {
+              "reused": 48,
+              "wrong_reuses": 0,
+              "utility_total": 48,
+              "q": 35.79756638937926,
+              "rank": 38,
+              "reuse_mask": "0xe8e8e8b8b8b8acacace8e8e8"
+            },
+            "utility_fit": {
+              "reused": 39,
+              "wrong_reuses": 0,
+              "utility_total": 39,
+              "q": 63.913546045410754,
+              "rank": 38,
+              "reuse_mask": "0xa8a8a8a8a8a8a8a8a8e8e8e8"
+            },
+            "carry_forward": {
+              "reused": 48,
+              "wrong_reuses": 0,
+              "utility_total": 48,
+              "q": 35.79756638937926,
+              "rank": 38,
+              "reuse_mask": "0xe8e8e8b8b8b8acacace8e8e8"
+            },
+            "continuous_revision": {
+              "reused": 48,
+              "wrong_reuses": 0,
+              "utility_total": 48,
+              "q": 35.28157281229697,
+              "rank": 38,
+              "reuse_mask": "0xe8e8e8b8b8b8acacace8e8e8"
+            }
+          },
+          "set_band": {
+            "reused": 54,
+            "wrong_reuses": 0,
+            "utility_total": 54,
+            "reuse_mask": "0xe0e0e0f8f8f8ecececf8f8f8",
+            "wrong_mask": "0x0"
+          }
+        }
+      }
+    }
+  }
+}

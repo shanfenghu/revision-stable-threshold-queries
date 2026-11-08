@@ -1,0 +1,12 @@
+{
+  "python_minimum": "3.9",
+  "runtime_dependencies": [],
+  "test_dependencies": [],
+  "numerical_interpreter_tested": "CPython 3.9.6",
+  "plotting_interpreter": "CPython 3.13.5",
+  "plotting_dependencies_file": "requirements-plot.txt",
+  "plotting_minimum_python": "3.10",
+  "network_during_replay": false,
+  "installation_for_numerical_replay": false,
+  "numerical_dependency_lock": "Standard library only; no third-party packages to resolve."
+}
