@@ -1,0 +1,160 @@
+{
+  "ili": {
+    "calibration_units": 30,
+    "test_units": 24,
+    "latest_calibration_target": "2013-10-25",
+    "scales": [
+      923.0,
+      761.5,
+      486.625,
+      282.5,
+      235.75,
+      218.625,
+      208.0,
+      208.0,
+      208.0,
+      208.0,
+      208.0,
+      208.0
+    ],
+    "models": {
+      "revision_loss": {
+        "beta": 0.21,
+        "calibrated_q": 2.310687500000007,
+        "rank": 30
+      },
+      "utility_fit": {
+        "beta": 0.175,
+        "calibrated_q": 2.4756530448717933,
+        "rank": 30
+      },
+      "carry_forward": {
+        "beta": 0.0,
+        "calibrated_q": 3.5327433628318583,
+        "rank": 30
+      }
+    },
+    "summary": {
+      "revision_loss": {
+        "query_answers": 288,
+        "reused": 227,
+        "deferred": 61,
+        "reuse_fraction": 0.7881944444444444,
+        "defer_fraction": 0.21180555555555555,
+        "wrong_reuses": 0,
+        "utility_per_query": 0.7881944444444444,
+        "mean_abs_query_error": 154.40907925610276,
+        "mean_abs_raw_coordinate_error": 462.81515117079886,
+        "mean_radius": 800.2681041666691,
+        "median_radius": 492.8985273437514,
+        "family_misses_descriptive_only": 5
+      },
+      "utility_fit": {
+        "query_answers": 288,
+        "reused": 227,
+        "deferred": 61,
+        "reuse_fraction": 0.7881944444444444,
+        "defer_fraction": 0.21180555555555555,
+        "wrong_reuses": 0,
+        "utility_per_query": 0.7881944444444444,
+        "mean_abs_query_error": 141.53574019272585,
+        "mean_abs_raw_coordinate_error": 331.5146556473829,
+        "mean_radius": 857.4011712072644,
+        "median_radius": 528.0877401342144,
+        "family_misses_descriptive_only": 1
+      },
+      "carry_forward": {
+        "query_answers": 288,
+        "reused": 220,
+        "deferred": 68,
+        "reuse_fraction": 0.7638888888888888,
+        "defer_fraction": 0.2361111111111111,
+        "wrong_reuses": 0,
+        "utility_per_query": 0.7638888888888888,
+        "mean_abs_query_error": 474.984375,
+        "mean_abs_raw_coordinate_error": 450.8030303030303,
+        "mean_radius": 1223.506784660767,
+        "median_radius": 753.5783185840708,
+        "family_misses_descriptive_only": 3
+      }
+    },
+    "assurance": "Descriptive chronological comparison; no empirical coverage, acceptance-conditional or time-uniform promise"
+  },
+  "gdp": {
+    "calibration_units": 39,
+    "test_units": 6,
+    "latest_calibration_target": "2009-07",
+    "scales": [
+      0.0007944005914168883,
+      0.0007944005914168883,
+      0.0007944005914168883,
+      0.0007944005914168883,
+      0.0007944005914168883,
+      0.0007944005914168883,
+      0.0007944005914168883,
+      0.0007944005914168883
+    ],
+    "models": {
+      "revision_loss": {
+        "beta": 0.0,
+        "calibrated_q": 7.17421022685918,
+        "rank": 38
+      },
+      "utility_fit": {
+        "beta": 0.015,
+        "calibrated_q": 21.399382442830245,
+        "rank": 38
+      },
+      "carry_forward": {
+        "beta": 0.0,
+        "calibrated_q": 7.17421022685918,
+        "rank": 38
+      }
+    },
+    "summary": {
+      "revision_loss": {
+        "query_answers": 48,
+        "reused": 38,
+        "deferred": 10,
+        "reuse_fraction": 0.7916666666666666,
+        "defer_fraction": 0.20833333333333334,
+        "wrong_reuses": 0,
+        "utility_per_query": 0.7916666666666666,
+        "mean_abs_query_error": 0.00024547945607422683,
+        "mean_abs_raw_coordinate_error": 0.0002147945240648097,
+        "mean_radius": 0.0056991968471660215,
+        "median_radius": 0.0056991968471660215,
+        "family_misses_descriptive_only": 0
+      },
+      "utility_fit": {
+        "query_answers": 48,
+        "reused": 12,
+        "deferred": 36,
+        "reuse_fraction": 0.25,
+        "defer_fraction": 0.75,
+        "wrong_reuses": 0,
+        "utility_per_query": 0.25,
+        "mean_abs_query_error": 0.004345044817659923,
+        "mean_abs_raw_coordinate_error": 0.0031734041489588673,
+        "mean_radius": 0.016999682068540523,
+        "median_radius": 0.016999682068540523,
+        "family_misses_descriptive_only": 0
+      },
+      "carry_forward": {
+        "query_answers": 48,
+        "reused": 38,
+        "deferred": 10,
+        "reuse_fraction": 0.7916666666666666,
+        "defer_fraction": 0.20833333333333334,
+        "wrong_reuses": 0,
+        "utility_per_query": 0.7916666666666666,
+        "mean_abs_query_error": 0.00024547945607422683,
+        "mean_abs_raw_coordinate_error": 0.0002147945240648097,
+        "mean_radius": 0.0056991968471660215,
+        "median_radius": 0.0056991968471660215,
+        "family_misses_descriptive_only": 0
+      }
+    },
+    "assurance": "Descriptive chronological comparison; no empirical coverage, acceptance-conditional or time-uniform promise"
+  }
+}

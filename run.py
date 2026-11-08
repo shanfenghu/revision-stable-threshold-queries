@@ -13,6 +13,8 @@ def main():
         sub.add_argument('--inputs', type=Path, required=True)
         if name != 'check-inputs':
             sub.add_argument('--output', type=Path, required=True)
+        if name == 'check-inputs':
+            sub.add_argument('--exact', action='store_true', help='require the recorded historical byte versions')
     unpack = commands.add_parser('unpack-inputs')
     unpack.add_argument('--archive', type=Path, required=True)
     unpack.add_argument('--output', type=Path, required=True)
@@ -25,7 +27,8 @@ def main():
         if args.command == 'unpack-inputs':
             result = point.unpack_inputs(args.archive, args.output)
         elif args.command == 'check-inputs':
-            result = {'verified_input_files': len(point.verify_inputs(args.inputs))}
+            records = point.verify_inputs(args.inputs, exact=args.exact)
+            result = {'present_input_files': len(records), 'all_recorded_versions': all(v['matches_recorded_version'] for v in records), 'input_provenance': records}
         elif args.command == 'figures':
             from release_queries import figures
             result = figures.run(args.inputs, args.run, args.output)

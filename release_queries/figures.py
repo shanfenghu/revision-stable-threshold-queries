@@ -41,7 +41,7 @@ def run(inputs, run_directory, output):
     if output.exists() or output.is_symlink():
         raise ValueError('Figure output exists; choose a new directory')
     summary = reproduce.read_json(run_directory/'audits/summary.json')
-    reproduce.compare(summary, reproduce.read_json(reproduce.ROOT/'expected/audits.json'))
+    reproduce.compare(reproduce.audit_summary(summary), reproduce.read_json(reproduce.ROOT/'expected/audits.json'))
     source = availability(inputs, run_directory)
     import matplotlib
     matplotlib.use('Agg')

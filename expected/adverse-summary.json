@@ -1,0 +1,56 @@
+{
+  "ili": {
+    "eligible_pool": 74,
+    "test_families": 2,
+    "query_answers": 24,
+    "models": {
+      "carry_forward": {
+        "reused": 6,
+        "wrong_reuses": 0,
+        "family_misses": 0
+      },
+      "revision_loss": {
+        "reused": 7,
+        "wrong_reuses": 0,
+        "family_misses": 0
+      },
+      "query_loss": {
+        "reused": 6,
+        "wrong_reuses": 0,
+        "family_misses": 0
+      },
+      "margin_query_loss": {
+        "reused": 4,
+        "wrong_reuses": 0,
+        "family_misses": 0
+      }
+    }
+  },
+  "gdp": {
+    "eligible_pool": 319,
+    "test_families": 2,
+    "query_answers": 16,
+    "models": {
+      "carry_forward": {
+        "reused": 6,
+        "wrong_reuses": 0,
+        "family_misses": 0
+      },
+      "revision_loss": {
+        "reused": 6,
+        "wrong_reuses": 0,
+        "family_misses": 0
+      },
+      "query_loss": {
+        "reused": 6,
+        "wrong_reuses": 0,
+        "family_misses": 0
+      },
+      "margin_query_loss": {
+        "reused": 6,
+        "wrong_reuses": 0,
+        "family_misses": 0
+      }
+    }
+  }
+}

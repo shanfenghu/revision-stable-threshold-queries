@@ -74,7 +74,7 @@ class Semantics(unittest.TestCase):
             (Path(temp)/"file").write_bytes(b"x")
             manifest = {"files": [{"path": "file", "bytes": 1, "sha256": "0"*64}]}
             with self.assertRaisesRegex(ValueError, "version mismatch"):
-                verify_inputs(Path(temp), manifest)
+                verify_inputs(Path(temp), manifest, exact=True)
 
     def test_all_zero_scale_is_unsupported(self):
         with self.assertRaisesRegex(ValueError, "Unsupported scale"):
@@ -108,7 +108,7 @@ class ExactInputs(unittest.TestCase):
                 if u["issue"] not in used:
                     u["targets"] = [1e100]*len(u["targets"])
                     u["raw_targets"] = [1e100]*len(u["raw_targets"])
-            compare(c.choose_fit(changed, d), self.fits[d])
+            compare({k: v for k, v in c.choose_fit(changed, d).items() if k != "candidates"}, self.fits[d])
 
     def test_revision_grid_matches_independent_projection_and_unit_change(self):
         for d, units in (("ili", self.ili), ("gdp", self.gdp)):

@@ -1,7 +1,9 @@
 # Interfaces and assumptions
 
-`run.py` is the offline entrypoint. Inputs must match `inputs.json`; output
-folders must be new. The protocol is a frozen scientific comparison, not a
+`run.py` is the offline entrypoint. `inputs.json` records provider routes and the
+versions originally analysed. Input hashes are recorded; `check-inputs --exact`
+optionally enforces those versions. Source adapters still validate chronology,
+missingness and source agreement; output folders must be new. The protocol is a frozen scientific comparison, not a
 hyperparameter-search interface. See the root and data READMEs for commands.
 
 ## Source states and workloads

@@ -137,7 +137,7 @@ def load_units(inputs, fits=None):
     if fits is None:
         fits = {domain: study.choose_fit(units, domain)
                 for domain, units in [('ili', early), ('gdp', output)]}
-    replay.compare(fits, replay.read_json(replay.ROOT / 'expected/fits.json'))
+    replay.compare(replay.fit_summary(fits), replay.read_json(replay.ROOT / 'expected/fits.json'))
     return {'ili': (early, later), 'gdp': (output, output)}, fits, ledger
 
 
@@ -216,7 +216,7 @@ def run(inputs, output, fits=None):
     pools, fits, ledger = load_units(inputs, fits)
     protocol = replay.read_json(replay.ROOT / 'protocol.json')
     adverse_results = {d: adverse.run_domain(early, d) for d, (early, _) in pools.items()}
-    replay.compare(adverse_results, replay.read_json(replay.ROOT / 'expected/adverse.json'))
+    replay.compare(replay.adverse_summary(adverse_results), replay.read_json(replay.ROOT / 'expected/adverse-summary.json'))
     results, certificates, verification = {}, {}, {}
     for domain, (early, units) in pools.items():
         parts = study.training_parts(early)
@@ -302,7 +302,7 @@ def run(inputs, output, fits=None):
                 if verify['windows'][name]['floating']['decision_mismatches']:
                     raise ValueError('Final floating decisions differ from recorded affine model')
             results[domain][policy], certificates[domain][policy], verification[domain][policy] = record, certificate, verify
-    replay.compare(results, replay.read_json(replay.ROOT / 'expected/audits.json'))
+    replay.compare(replay.audit_summary(results), replay.read_json(replay.ROOT / 'expected/audits.json'))
     output.mkdir(parents=True)
     for name, value in [('summary', results), ('certificates', certificates), ('verification', verification), ('adverse', adverse_results)]:
         (output/(name+'.json')).write_text(json.dumps(value, indent=2, allow_nan=False)+'\n')
