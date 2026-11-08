@@ -64,6 +64,26 @@ ledgers and arrays are local analysis outputs, not distributed datasets.
 Timing is observational, not a speedup benchmark. A CPU, about 300 MiB RAM,
 100 MiB free local disk and one minute after acquisition are working budgets.
 
+## Selected outputs
+
+The actual selected scientific outputs are included:
+
+- [Illustrative construction](figures/construction.pdf),
+  [recorded availability](figures/availability.pdf) and
+  [scale-policy comparisons](figures/sensitivity.pdf).
+- [Point-fit table](tables/point-fits.csv) and
+  [complete policy/window table](tables/policy-comparison.csv).
+- [Plotted findings](figures/values.json), [key fitted comparisons](expected/comparison-summary.json)
+  and [key audit findings](expected/audits.json). The other compact references in
+  `expected/` retain fitted parameters, maturity and the separate adverse results.
+
+These are our scientific displays, tables and findings, retained with their
+source credit. Provider input datasets and bulky intermediate arrays are separate.
+`run.py reproduce` generates the point table as `summary.csv` and the policy table
+as `audits/summary.csv`; `run.py figures` generates the three PDFs and `values.json`.
+The commands below regenerate them in fresh external output directories. Selected
+outputs remain usable without installing plotting software or acquiring inputs.
+
 ## Optional figures
 
 Three vector displays and their plotted values can be generated from a verified
