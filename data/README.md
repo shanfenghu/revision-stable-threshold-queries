@@ -1,10 +1,11 @@
 # Data sources and reproduction
 
 Download the data directly from the original providers below. This repository
-supplies code, acquisition metadata and small summaries of our analysis. It does
-not distribute provider data, prepared copies of provider observations or a data
-archive in Git or release assets. Keep downloaded data, prepared arrays, dense
-run records, caches and weights in local storage outside your checkout.
+supplies code, acquisition metadata and small summaries of our analysis. The
+current tree excludes provider datasets, prepared copies of provider observations
+and data archives. Provider datasets are not offered as release assets. Keep
+downloaded data, prepared arrays, dense run records, caches and weights in local
+storage outside your checkout.
 
 ## Sources, access and citation
 
