@@ -1,85 +1,143 @@
-# Exact source inputs
+# Data sources and reproduction
 
-Numerical reproduction starts from 34 retained regular files, totalling
-20,856,912 bytes. They are excluded from this code distribution. `../inputs.json`
-records every relative filename, role, size, SHA-256 and original retrieval URL:
+Download the data directly from the original providers below. This repository
+supplies code, acquisition metadata and small summaries of our analysis. It does
+not distribute provider data, prepared copies of provider observations or a data
+archive in Git or release assets. Keep downloaded data, prepared arrays, dense
+run records, caches and weights in local storage outside your checkout.
 
-- `ili-revisions.csv`: 19,502,666 bytes; SHA-256
-  `cbcf24ae283fe1f1da3efcba6cc0eafad527a9443d978e76a38adefd8fabd03e`.
-- `real-output.xlsx`: 700,496 bytes; SHA-256
-  `ae854a7518bf3a0504e4c477344bd7ed98c4321326ed2b1952b69ffaa1a7adce`.
-- Sixteen `ili-training/lag00.json` through `lag15.json` responses.
-- Sixteen `ili-evaluation/lag00.json` through `lag15.json` responses.
+## Sources, access and citation
 
-The CSV and workbook were retained on 3 November 2026. The dated responses cover
-the declared national FluView windows in the manifest. Their payloads, not a
-current source website, define this version. No preprocessing repair, zero-fill,
-workbook metadata repair or replacement download is part of reproduction.
+**Illness counts.** The national ILINet counts originate with the US Centers for
+Disease Control and Prevention and are served by CMU Delphi. We use `num_ili`
+(reported visits), not a population infection count. Obtain the revision CSV
+from the authors' [original CMU Delphi dataset repository](https://github.com/cmu-delphi/data-revisions-forecasting-paper):
+[download CSV](https://media.githubusercontent.com/media/cmu-delphi/data-revisions-forecasting-paper/main/data/raw/ilicases_weekly_preprocessed.csv).
+Credit Tang, Rumack, Wilder and Rosenfeld, *Real-time forecasting of data
+revisions in epidemic surveillance streams*, PLOS Computational Biology (2025),
+[doi:10.1371/journal.pcbi.1013709](https://doi.org/10.1371/journal.pcbi.1013709).
+Only raw counts in that provider-prepared CSV enter this analysis; its engineered
+features and precomputed prediction targets are not used. This is the dataset
+creator's distribution, not a mirror maintained by this project.
 
-## Sources and credit
+Dated reports come from the [Delphi FluView API](https://cmu-delphi.github.io/delphi-epidata/api/fluview.html).
+An example of the actual training request is
+[National 2011w01–2012w36 at lag zero](https://api.delphi.cmu.edu/epidata/fluview/?regions=nat&epiweeks=201101-201236&lag=0).
+The provider documents this as legacy V3, being phased out in favour of V5.
+Do not substitute a V5 signal without checking vintage and release-date semantics.
+The provider describes the national source as publicly accessible US government
+data; see its [licensing guidance](https://cmu-delphi.github.io/delphi-epidata/api/README.html#data-licensing).
+Credit Farrow, Brooks, Rumack, Tibshirani and Rosenfeld (2015), *Delphi Epidata API*,
+as recommended by that provider. Private imputed series can require authorization
+and are not used here. Respect
+current provider terms and API limits, retain the source credit and do not imply
+CDC or Delphi endorsement. An upstream repository's software licence does not
+by itself settle every source payload's terms.
 
-The CSV accompanies Tang, Rumack, Wilder and Rosenfeld, *Real-time forecasting of
-data revisions in epidemic surveillance streams*, PLOS Computational Biology
-(2025), [doi:10.1371/journal.pcbi.1013709](https://doi.org/10.1371/journal.pcbi.1013709).
-Its original retrieval route is the CMU Delphi data repository listed in the
-manifest. Only raw counts enter this workload; engineered features and
-precomputed targets do not.
+**Real output.** Download the Federal Reserve Bank of Philadelphia's
+[Real-Time Data Set for Macroeconomists, real GNP/GDP](https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/routput).
+Choose **Monthly Vintages, 1965:M11 to present**. The actual workbook URL is in
+`../inputs.json` and is downloaded as `real-output.xlsx`. Credit the Bank and its
+listed University of Richmond/BEA collaborators; consult the linked general and
+real-output documentation. Levels are billions of real dollars at seasonally
+adjusted annual rates. Historical GNP/GDP definitions and fixed/chain weighting
+change; each evaluated log contrast uses one vintage consistently.
+The Bank's [terms](https://www.philadelphiafed.org/about-us/privacy-notice)
+allow informational, educational and research use subject to stated restrictions;
+material owned by others can require permission. Conclusions are ours, without
+Bank endorsement. The implementation's MIT licence does not license provider
+inputs. We supply acquisition instructions rather than redistribute those inputs.
 
-Dated records come from the
-[Delphi FluView API](https://cmu-delphi.github.io/delphi-epidata/api/fluview.html),
-national region, at the sixteen declared revision lags. The recorded release date
-is an archive-known-by cutoff, not necessarily the earliest public report or a
-clinical reporting time. Missing source counts never become observed zeros.
+## Versions and scientific selections
 
-The workbook comes from the Federal Reserve Bank of Philadelphia
-[Real-Time Data Set for Macroeconomists](https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/real-time-data-set-for-macroeconomists),
-[real-output documentation](https://www.philadelphiafed.org/surveys-and-data/real-time-data-research/routput).
-It contains 733 monthly vintages and 319 quarterly reference rows. Preserve its
-exact bytes, including package metadata. Values are billions of real dollars at
-seasonally adjusted annual rates; GNP/GDP definitions and fixed/chain weighting
-change historically. Both terms of each evaluated log contrast use one vintage.
+`../inputs.json` lists the 34 original provider URLs, local filenames, roles,
+recorded sizes and SHA-256 values. The CSV and workbook were retained on
+3 November 2026. The recorded workbook has 733 monthly vintages and 319 quarterly
+reference rows. Its package metadata is not a scientific input and is not repaired.
+The CSV branch and provider workbook may change. Digests identify the version
+previously analysed; equivalent serialization or workbook metadata need not match
+bit for bit to reproduce substantive findings.
 
-The Bank's [terms of use](https://www.philadelphiafed.org/about-us/privacy-notice)
-limit website content to informational, educational and research use, warn that
-some material may require its owner's permission, and prohibit implied
-endorsement. Conclusions drawn here belong to the analysis, not the Bank.
-The retained Delphi route is a legacy API; current documentation describes a
-migration to V5. This replay does not migrate historical payloads or treat a
-new endpoint as the same frozen input version.
+The other 32 files are national FluView responses at lags 0–15 weeks: sixteen
+training requests over 2011w01–2012w36 and sixteen later requests over
+2012w51–2014w30. Each URL states its exact reference-week range; upper endpoints
+are shortened at positive lags to keep reports within the acquired window.
+Filenames are `ili-training/lag00.json` through `lag15.json`, and the corresponding
+`ili-evaluation/` names. Preserve that layout; do not concatenate responses or
+replace release dates with nominal issue weeks.
 
-The implementation's MIT licence grants no rights in these inputs. Provider
-terms, attribution requirements and any necessary permissions govern their
-acquisition and redistribution. The PLOS article's publication licence does not
-by itself establish a redistribution grant for every external source payload.
+`../protocol.json` gives the fixed analysis windows and selections. Training
+uses 24 scale families, then 24 radius-proxy families, then 12 utility families,
+with strict target-maturity gaps. Output training starts in January 2000. ILI
+uses twelve fixed-support contrasts over eleven weeks and a 28-day later release;
+output uses eight contrasts over eight quarters and three monthly vintages.
+Final calibration, subsequent diagnostics and the support-disjoint output block
+are selected by the recorded dates and support identities. No later outcomes
+select a fit. These are retrospective, previously inspected, dependent windows.
 
-## Acquisition and preparation
+## Download and prepare
 
-Use a permitted retained copy of the listed files or the exact companion archive.
-The archive SHA-256 is
-`bd3f4e958fec10a3d50cdcc5bcd863fdc02cbf40b929f00e2ac7887f0fba15c7`.
-It is a separate data artifact, not included or promised by the code download.
-Run, from the code root:
+Python 3.9+ and its standard library suffice. Run from the code root. Choose an
+external directory; the script downloads directly from each URL in `inputs.json`,
+rejects failed API responses/error pages and preserves existing files:
 
 ```sh
-python3 -B run.py unpack-inputs --archive /path/to/release-query-inputs.zip --output /path/to/inputs
-python3 -B run.py check-inputs --inputs /path/to/inputs
+DATA_DIR="$(mktemp -d)/release-inputs"
+python3 -B data/fetch_inputs.py --output "$DATA_DIR"
+python3 -B run.py check-inputs --inputs "$DATA_DIR"
 ```
 
-The unpacker verifies exact member names, types, sizes and digests before creating
-the new directory. It rejects duplicates, extra members, symlinks and altered
-bytes. Preserve the manifest's relative filenames. An existing input directory
-can instead be checked directly without copying it.
+For a small acquisition check before requesting all files:
 
-Original URLs provide source provenance and possible acquisition routes, not an
-immutable historical archive. The GDP URL and API responses can change; the CSV
-URL names a moving repository branch. A newly downloaded file must match the
-manifest exactly. If it does not, stop and obtain the retained version through a
-permitted route. No untested current-download path is claimed to recover these
-bytes, and a checksum or URL is not a backup. Reproduction is unavailable without
-all exact inputs. No command downloads data automatically or refreshes digests.
+```sh
+python3 -B data/fetch_inputs.py --output "$DATA_DIR" --path ili-training/lag00.json
+```
 
-The saved CSV's upstream generation and the providers' complete historical
-archives are outside the replay. The replay does reconstruct the bounded dated
-source comparisons, all support exclusions, target maturity and numerical
-results from the retained payloads. Dependent families and inspected windows do
-not establish independent replication or nominal coverage.
+Use a fresh directory for a complete download after this check; existing files
+are never overwritten. If an endpoint is retired, denied or returns no records,
+consult the provider for historical access. Do not obtain the data from this
+project's Git history or release assets. No data archive upload is requested.
+The provider URLs are acquisition routes, not an immutable backup or a promise
+that every historical version remains obtainable.
+
+No separate input-copy preparation is necessary. The analysis reads the CSV,
+API JSON and XLSX XML directly: it uses CSV `value_raw`, API `num_ili`, `epiweek`,
+`issue`, `lag`, `release_date`, and the workbook's dated level columns. It checks
+finite/nonnegative counts, positive output levels, duplicate keys, epiweek/lag
+consistency, release chronology, required support and agreement of dated counts
+with the CSV. Missing counts remain missing. Families are reconstructed at their
+recorded known-by cutoffs; both terms of output contrasts use the same vintage.
+No zero-fill, retrospective replacement of an anchor or silent window change is
+part of preparation. Generated provenance ledgers and query arrays stay local.
+
+## Analyse and assess reproduction
+
+```sh
+RELEASE_QUERY_INPUTS="$DATA_DIR" python3 -B -m unittest discover -s tests -v
+python3 -B run.py reproduce --inputs "$DATA_DIR" --output /path/to/new-run
+```
+
+Allow about 21 MB of input transfer/storage, at least 100 MiB free local disk,
+about 300 MiB RAM and one minute on a recent laptop for analysis after acquisition.
+API latency can make downloading longer. No GPU or third-party numerical package
+is required. Use a new output directory. See the root README for optional display
+and table-ready CSV generation.
+
+The run records the actual input hashes and whether they match recorded versions,
+then compares compact fitted, aggregate-outcome, maturity and audit findings.
+Discrete counts, eligibility conditions and logical decisions remain exact.
+Floating summaries use relative tolerance `1e-8`, absolute tolerance `1e-10`,
+well above observed interpreter roundoff while far below the reported effects;
+this does not excuse a changed decision or cohort. Scalar certificates are still
+verified against direct ranks for the coordinates actually read. Full historical
+arrays, ZIP bytes and every old mask are not publication gates. A failed source,
+cohort or summary check is a discrepancy to investigate, not permission to refresh
+expected results or claim the original findings were reproduced. Optional
+`check-inputs --exact` diagnoses historical byte identity when provenance requires it.
+
+Checked on 8 November 2026: one actual training API response and the actual
+monthly workbook downloaded successfully; the CSV URL responded to a HEAD
+request. The small acquisition command and local source reconstruction are
+validated separately in the recorded checks. A fresh download of all 34 payloads
+and a V5 migration have not been tested. Available retained inputs support the
+analysis checks; complete acquisition remains dependent on the providers.

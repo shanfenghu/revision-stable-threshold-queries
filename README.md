@@ -22,7 +22,7 @@ python3 -B run.py check-inputs --inputs /path/to/inputs
 RELEASE_QUERY_INPUTS=/path/to/inputs python3 -B -m unittest discover -s tests -v
 ```
 
-Tests requiring the exact data explicitly skip when `RELEASE_QUERY_INPUTS` is
+Provider-data tests explicitly skip when `RELEASE_QUERY_INPUTS` is
 unset. Tests cover source dates/missingness, maturity, rebasing, declared reward,
 strict inequalities, rank paths, grid-missed islands, singleton/open optima,
 corrupt certificates, fractional flags and retrospective-witness feasibility.
@@ -30,17 +30,19 @@ See [API.md](API.md) for conventions and assumptions.
 
 ## Reproduce
 
-Obtain the exact inputs described in [data/README.md](data/README.md). Raw inputs
-are not bundled. With a permitted copy of the retained input archive:
+Download inputs from their original providers using [data/README.md](data/README.md).
+Store them outside this checkout; no provider data archive is distributed here.
 
 ```sh
-python3 -B run.py unpack-inputs --archive /path/to/release-query-inputs.zip --output /path/to/inputs
-python3 -B run.py reproduce --inputs /path/to/inputs --output /path/to/new-run
+DATA_DIR="$(mktemp -d)/release-inputs"
+python3 -B data/fetch_inputs.py --output "$DATA_DIR"
+python3 -B run.py reproduce --inputs "$DATA_DIR" --output /path/to/new-run
 ```
 
-Every command validates the 34 input sizes/digests before analysis. A changed
-payload is rejected, even when its URL is unchanged. Output directories must be
-new; no command refreshes numerical references or selects another window.
+Commands record input provenance and validate scientific source/cohort conditions.
+`check-inputs --exact` optionally enforces historical byte identity. A different
+serialization alone is not a reproduction failure; changed observations or
+findings must be investigated. Output directories must be new.
 The full recipe reconstructs the 201-point fits, source/eligibility/maturity
 ledgers, original point outcomes, all four continuous training optimum sets,
 all ten policy/window decision partitions, cost controls, one-sided point
@@ -53,12 +55,14 @@ all policy/window summaries. `audits/certificates.json` contains exact endpoints
 paths, masks and loss witnesses; `audits/adverse.json` retains the distinct
 margin-weighted comparison. Verification records identify actual checks.
 
-Discrete records and rational strings must match their retained references
-exactly; floating summaries use relative tolerance 1e-10 and absolute tolerance
-1e-12. Timing is observational, not a speedup benchmark. Numerical execution
-requires only a CPU, about 256 MiB RAM and 100 MiB free space including inputs
-and a run. Allow one minute as a working budget on a recent laptop; actual
-resource measurements and interpreter versions are recorded with each checked run.
+Small summaries in `expected/` record our fitted findings and comparisons, without
+provider observations or prepared query arrays. Counts and logical conditions are
+checked exactly; floating summaries use relative tolerance 1e-8 and absolute
+tolerance 1e-10. Full masks and certificates are verified internally for the
+recorded model rather than compared bitwise to every historical output. Dense
+ledgers and arrays are local analysis outputs, not distributed datasets.
+Timing is observational, not a speedup benchmark. A CPU, about 300 MiB RAM,
+100 MiB free local disk and one minute after acquisition are working budgets.
 
 ## Optional figures
 
