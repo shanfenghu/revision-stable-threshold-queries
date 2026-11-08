@@ -20,7 +20,7 @@ def quantile(calibration,regions,scales):
     k=math.ceil((len(calibration)+1)*.95)
     if not calibration or k>len(calibration):raise ValueError('Unsupported finite calibration rank')
     scores=[]
-    for family in calibration:
+    for family in p.checked_families(calibration, scales):
         distances=[]
         for row,scale in zip(family,scales):
             if scale<=0:raise ValueError('Nonpositive scale')
@@ -32,7 +32,7 @@ def quantile(calibration,regions,scales):
 def evaluate(evaluation,regions,scales,q):
     """Return fixed-answer decisions; evaluation targets enter scoring only."""
     reused=wrong=index=0;bounds=[]
-    for family in evaluation:
+    for family in p.checked_families(evaluation, scales):
         for row,scale in zip(family,scales):
             low,high=band(row,regions);low-=q*F(scale);high+=q*F(scale)
             accept=low>=0 if row[3]>=0 else high<0
@@ -50,9 +50,9 @@ def direct_float(calibration,evaluation,regions,scales):
     def raw(row):
         values=[float(row[0])+float(row[1])*b for b in endpoints]
         return min(values),max(values)
-    scores=[max(max(0.0,raw(row)[0]-float(row[2]),float(row[2])-raw(row)[1])/float(s) for row,s in zip(family,scales)) for family in calibration]
+    scores=[max(max(0.0,raw(row)[0]-float(row[2]),float(row[2])-raw(row)[1])/float(s) for row,s in zip(family,scales)) for family in p.checked_families(calibration, scales)]
     q=sorted(scores)[math.ceil((len(scores)+1)*.95)-1];mask=0;index=0
-    for family in evaluation:
+    for family in p.checked_families(evaluation, scales):
         for row,s in zip(family,scales):
             low,high=raw(row);low-=q*float(s);high+=q*float(s)
             if (low>=0 if row[3]>=0 else high<0):mask|=1<<index

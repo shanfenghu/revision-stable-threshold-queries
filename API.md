@@ -30,8 +30,10 @@ training alone. Final calibration and later outcomes never select a fit.
 solves rank-count feasible intervals. An affine row is
 `(base, slope, target, current)`; its prediction is `base + beta*slope`.
 The domain is the closed interval `[-1/2, 1/2]`. All numbers and scales must be
-finite, family widths must match the fixed positive scale vector, and the rank
-must be an available positive integer. `audit.recorded_scales` preserves a
+finite. Mismatched family/scale widths are rejected before calibration or
+decision pairing, including in direct witness checks. Family widths must match
+the fixed positive scale vector, and the rank must be an available positive
+integer. `audit.recorded_scales` preserves a
 recorded float's binary rational value, rather than rounding it to a decimal.
 
 ```python

@@ -19,6 +19,25 @@ def rational(x):
     return x if isinstance(x, F) else F(x)
 
 
+def checked_families(rows, scales):
+    """Yield complete families with one query per positive finite fixed scale.
+
+    A truncated zip would change both the family calibration score and the set
+    of answers being audited, so reject incompatible widths before pairing.
+    """
+    if not scales:
+        raise ValueError('Positive finite fixed scales required')
+    try:
+        if any(rational(s) <= 0 for s in scales):
+            raise ValueError('Positive finite fixed scales required')
+    except (TypeError, OverflowError, ValueError) as error:
+        raise ValueError('Positive finite fixed scales required') from error
+    for family in rows:
+        if len(family) != len(scales):
+            raise ValueError('Mismatched family width')
+        yield family
+
+
 @dataclass(frozen=True)
 class Line:
     slope: F
@@ -104,7 +123,7 @@ def at(path, x):
 def family_lines(rows, scales, oriented=False):
     """Build maximum-error affine pieces from (base,slope,target,current) rows."""
     out=[]
-    for family in rows:
+    for family in checked_families(rows, scales):
         lines=[]
         for (base,slope,target,current),scale in zip(family,scales):
             a,b,s=rational(slope),rational(base)-rational(target),rational(scale)
@@ -191,7 +210,7 @@ def verify_rank_path(path, lines_by_family, k):
 def decision_atoms(path, rows, scales):
     """Enumerate every open interval and singleton with constant answer decisions."""
     features=[]
-    for family in rows:
+    for family in checked_families(rows, scales):
         for (base,slope,target,current),scale in zip(family,scales):
             sign=1 if current>=0 else -1
             features.append((Line(sign*rational(slope)/rational(scale),sign*rational(base)/rational(scale)),current>=0,(current>=0)!=(target>=0)))
@@ -229,7 +248,7 @@ def verify_atoms(path, atoms, rows, scales):
         x=(r.left+r.right)/2
         q=at(path,x)(x)
         reuse=wrong=index=0
-        for family in rows:
+        for family in checked_families(rows, scales):
             for (base,slope,target,current),scale in zip(family,scales):
                 center=rational(base)+rational(slope)*x
                 radius=q*rational(scale)
@@ -246,7 +265,7 @@ def verify_atoms(path, atoms, rows, scales):
             assert r.left<r.right and not r.left_closed and not r.right_closed
             assert not any(r.left<p.left<r.right for p in path)
             q=at(path,(r.left+r.right)/2)
-            for family in rows:
+            for family in checked_families(rows, scales):
                 for (base,slope,target,current),scale in zip(family,scales):
                     sign=1 if current>=0 else -1
                     margin=Line(sign*rational(slope)/rational(scale),sign*rational(base)/rational(scale))

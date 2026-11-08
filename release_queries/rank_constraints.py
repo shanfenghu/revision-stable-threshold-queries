@@ -159,6 +159,16 @@ def summary(atoms,answers):
 def direct(calibration,evaluation,scales,k,beta,thresholds=None):
     """Check a witness by sorting exact raw family maxima, without any paths."""
     thresholds=thresholds if thresholds is not None else [F(0)]*len(scales)
+    calibration, evaluation = list(calibration), list(evaluation)
+    if type(k) is not int or not 1 <= k <= len(calibration):
+        raise ValueError('An available positive integer rank is required')
+    try:
+        if not scales or any(F(s) <= 0 for s in scales):
+            raise ValueError('Positive finite fixed scales required')
+    except (TypeError, OverflowError, ValueError) as error:
+        raise ValueError('Positive finite fixed scales required') from error
+    if len(thresholds) != len(scales) or any(len(v) != len(scales) for v in calibration + evaluation):
+        raise ValueError('Mismatched family or threshold width')
     q=sorted(max(abs(y-base-slope*beta)/s for (base,slope,y,cur),s in zip(family,scales)) for family in calibration)[k-1]
     reused=wrong=idx=0
     for family in evaluation:
